@@ -1,0 +1,42 @@
+.navContainer {
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    box-shadow: inset -5px -2px 4px 0px var(--secondary-color);
+    padding: 1em;
+}
+
+a {
+    font-family: 'Madimi One', sans-serif;
+}
+.navbar-brand {
+    font-family: 'Concert One', sans-serif;
+    font-size: 2em;
+    margin-left: 1em;
+    /* justify-self: baseline; */
+}
+.navbar-nav {
+    width: 50vw;
+    /* display: flex; */
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: 3em;
+}
+.navbar {
+    background-color: var(--background-color) !important;
+    /* border-bottom: 3px solid var(--accent-color); */
+    box-shadow: inset 1px 2px 4px 0px var(--secondary-color);
+
+}
+.container-fluid {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}

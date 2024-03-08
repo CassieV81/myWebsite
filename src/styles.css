@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Kode+Mono:wght@400..700&family=Madimi+One&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
+
+/* :root {
+    --primary-color: #889d64; 
+    --secondary-color: #aeccb6; 
+    --accent-color: #83b19f; 
+    --text-color: #11140c; 
+    --background-color: #f7f5f4;
+  } */
+  /* :root {
+    --primary-color: #889d64; 
+    --secondary-color: #aeccb6; 
+    --accent-color: #83b19f; 
+    --text-color: #11140c; 
+    --background-color: #f7f5f4;
+  } */
+  :root {
+    --primary-color: #000000;
+    --secondary-color: #474747;
+    --accent-color: #BDBDBD;
+    --text-color: #000000;
+    --background-color: #FFFFFF;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Kode Mono", monospace;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+a {
+    text-decoration: none;   
+    padding: 0 10px; 
+    color: var(--text-color);
+}
