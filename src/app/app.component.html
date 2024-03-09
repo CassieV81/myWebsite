@@ -1,24 +1,41 @@
 
-
-<!-- <div class="container"> -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">CassV</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-            <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
-            <a class="nav-link" routerLink="/skills" routerLinkActive="active">Skills</a>
-            <a class="nav-link" routerLink="/work" routerLinkActive="active">Work</a>
-            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
-          </div>
-        </div>
+<div class="container">
+  <div class="header">
+    <nav>
+      <div class="logo"><a href="#">CassV</a></div>
+      <div class="links">
+        <a routerLink="home" routerLinkActive="active" fragment="Home">Home</a>
+        <a routerLink="home" routerLinkActive="active" fragment="About">About</a>
+        <a routerLink="home" routerLinkActive="active" fragment="Skills">Skills</a>
+        <a routerLink="home" routerLinkActive="active" fragment="Contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+  <!-- <section>
+    <router-outlet></router-outlet>
+  </section> -->
+  <section id="Home">
+    <app-home></app-home>
+  </section>
+  <section id="About">
+    <app-about></app-about>
+  </section>
+  <section id="Skills">
+    <app-skills></app-skills>
+  </section>
+  <section id="Contact">
+    <app-contact></app-contact>
+  </section>
+  <footer>
+    <div>
+      <a href="https://github.com/CassieV81" target="_blank">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/cassandra-chidinma-obiagwu-1aa7a81a9/" target="_blank">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
     </div>
-  </nav>
-  <footer>Cassie 2024	&#9400;</footer>
-<!-- </div> -->
+  </footer>
+</div>
 
-<router-outlet></router-outlet>
+

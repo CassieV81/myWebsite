@@ -1,42 +1,62 @@
-.navContainer {
-    background-color: var(--secondary-color);
-    padding: 10px;
-}
-footer {
+
+.header nav {
     position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    text-align: center;
-    box-shadow: inset -5px -2px 4px 0px var(--secondary-color);
-    padding: 1em;
-}
-
-a {
-    font-family: 'Madimi One', sans-serif;
-}
-.navbar-brand {
-    font-family: 'Concert One', sans-serif;
-    font-size: 2em;
-    margin-left: 1em;
-    /* justify-self: baseline; */
-}
-.navbar-nav {
-    width: 50vw;
-    /* display: flex; */
+    top: 0;
+    display: flex;
+    align-items: center;
     justify-content: space-around;
-    margin-left: auto;
-    margin-right: 3em;
+    padding: 15px;
+    height: var(--header-height);
+    width: var(--page-width);
+    background-color: var(--secondary-color);
 }
-.navbar {
-    background-color: var(--background-color) !important;
-    /* border-bottom: 3px solid var(--accent-color); */
-    box-shadow: inset 1px 2px 4px 0px var(--secondary-color);
 
+.links {
+    font-family: 'Madimi One', sans-serif;
+    /* margin-inline: auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10%; */
 }
-.container-fluid {
-    background-color: var(--background-color);
-    color: var(--text-color);
+.links a:hover {
+    text-decoration: underline;
+}
+.links a {
+    color: var(--secondary-text-color);
+}
+
+.logo a {
+    color: var(--secondary-text-color);
+    font-family: 'Concert One', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+    border: 2px solid var(--secondary-text-color);
+    width: min(100px, 50%);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-family: 'Concert One', sans-serif;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+.container {
+    height: var(--page-height);
+    display: grid;
+    grid-template-rows: var(--header-height) 1fr 1fr 1fr 1fr var(--footer-height);
+}
+section {
+    /* height: var(--content-heigth); */
+    /* width: min(80ch, 100% - 4rem); */
+    width: 100%;
+    margin-inline: auto;
+    /* border-radius: 10px; */
+    /* padding: 15px; */
+}
+i {
+    color: var(--secondary-text-color);
 }
