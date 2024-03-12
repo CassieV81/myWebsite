@@ -1,62 +1,59 @@
 
-.header nav {
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 15px;
-    height: var(--header-height);
-    width: var(--page-width);
-    background-color: var(--secondary-color);
-}
-
-.links {
-    font-family: 'Madimi One', sans-serif;
-    /* margin-inline: auto;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    gap: 10%; */
-}
-.links a:hover {
-    text-decoration: underline;
-}
-.links a {
-    color: var(--secondary-text-color);
-}
-
-.logo a {
-    color: var(--secondary-text-color);
-    font-family: 'Concert One', sans-serif;
-    font-size: clamp(1rem, 2.5vw, 2.5rem);
-    border: 2px solid var(--secondary-text-color);
-    width: min(100px, 50%);
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    font-family: 'Concert One', sans-serif;
-    padding: 10px;
-    background-color: var(--secondary-color);
-}
 .container {
-    height: var(--page-height);
+    --gap: clamp(1rem, 6vw, 3rem);
+    --full: minmax(var(--gap), 1fr);
+    --main: min(75ch, 100% - var(--gap) * 2);
+    --popout: minmax(0, 8rem);
+    --feature: minmax(0, 5rem);
+
     display: grid;
-    grid-template-rows: var(--header-height) 1fr 1fr 1fr 1fr var(--footer-height);
+    grid-template-columns: [full-start] var(--full)
+        [popout-start] var(--popout) 
+        [feature-start] var(--feature)
+        [main-start] var(--main) [main-end]
+        var(--feature) [feature-end]
+        var(--popout) [popout-end] var(--full) [full-end];
+}
+
+.container > * {
+    grid-column: full;
+}
+
+.container > section {
+    grid-column: main;
+}
+.container > #Home {
+    grid-column: feature;
+    background: url('../assets/profile_picture.png') no-repeat center;
+    background-size: contain;
+    height: calc(100vh - var(--header-heigth));
+    display: flex;
+    align-items: center;
+}
+.container > #header, #footer {
+    grid-column: popout;
+}
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--header-heigth);
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--ff-madimi);
+    height: var(--header-heigth);
+}
+.links {
+    margin: 0 auto;
+    font-size: var(--fs-500);
+}
+.logo {
+    font-size: var(--fs-600);
+    border: 3px dashed;
 }
 section {
-    /* height: var(--content-heigth); */
-    /* width: min(80ch, 100% - 4rem); */
-    width: 100%;
-    margin-inline: auto;
-    /* border-radius: 10px; */
-    /* padding: 15px; */
-}
-i {
-    color: var(--secondary-text-color);
+    padding-block: min(10vh, 10rem);
 }

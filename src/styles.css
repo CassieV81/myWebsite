@@ -10,20 +10,17 @@
     --background-color: #f7f5f4;
   } */
   :root {
-    --primary-color: 354c35;
-    --secondary-color: rgba(71, 71, 71, 0.4);
-    --accent-color: rgba(189, 189, 189, 0.6);
-    --text-color: #000000;
-    --secondary-text-color: rgb(246, 230, 230);
-    --background-color: #FFFFFF;
+    --ff-kode: "Kode Mono", monospace; 
+    --ff-concert: 'Concert One', sans-serif;
+    --ff-madimi: 'Madimi One', sans-serif;
 
-    --page-height: 100vh;
-    --header-height: 12vh;
-    --footer-height: 10vh;
-    --content-height: calc(var(--page-height) - (var(--header-height) + var(--footer-height)));
+    --fs-xl: clamp(2rem, 5vw, 4rem);
+    --fs-800: clamp(1.5rem, 4vw, 3rem);
+    --fs-600: clamp(1.3rem, 2.5vw, 3rem);
+    --fs-500: clamp(1.25rem, 1.8vw, 2rem);
+    --fs-400: clamp(1rem, 1.25vw, 1.25rem);
 
-    --page-width: 100vw;
-    --content-width: 80vw;
+    --header-heigth: 10vh;
 }
 
 *, *::after, *::before {
@@ -35,38 +32,19 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    font-family: "Kode Mono", monospace;
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-family: var(--ff-kode);
+    font-size: var(--fs-400);
     line-height: 1.5;
-    color: var(--text-color);
-    /* background-color: var(--background-color); */
-    /* background: url('./assets/pexels-codioful.jpg') no-repeat fixed center; */
-	/* background: linear-gradient(-45deg, #82d685, #558bb3, #b758d2); */
-	background: linear-gradient(-45deg, #7e967e, #354c35, #8b908b);
-	background-size: 800% 800%;
-	animation: gradient 30s ease infinite;
-	height: var(--page-height);
-}
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    min-height: 100vh;
 }
 a {
     text-decoration: none;   
     padding: 0 10px; 
-    color: var(--text-color);
 }
 img {
-    height: inherit;
-    /* width: min(90%, 80vw); */
-    /* max-width: 100%;
-    display: block; */
-    /* box-shadow: 0px 5px 3px -1px var(--secondary-color); */
+    max-width: 100%;
+    display: block;
+}
+h2 {
+    grid-column: feature;
 }
