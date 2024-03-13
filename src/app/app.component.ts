@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+
+  isLight: boolean = true
   
   activeRoute: ActivatedRoute = inject(ActivatedRoute);
 
@@ -19,5 +21,16 @@ export class AppComponent implements OnInit{
   
   jumpToSection(section: any) {
     document.getElementById(section)?.scrollIntoView({behavior: 'smooth'})
+  }
+
+  applyTheme() {
+    const theme = this.isLight ? 'light' : 'dark';
+    document.body.setAttribute('data-theme', theme);
+  }
+
+  toggleTheme() {
+    this.isLight = !this.isLight;
+    localStorage.setItem('themePreference', this.isLight ? 'light' : 'dark');
+    this.applyTheme();
   }
 }

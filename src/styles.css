@@ -21,6 +21,22 @@
     --fs-400: clamp(1rem, 1.25vw, 1.25rem);
 
     --header-heigth: 10vh;
+
+    /* Light mode colors */
+    --background-color: #FFFFFF;
+    --primary-text-color: #333333;
+    --secondary-text-color: #555555;
+    --accent-color: #354c35;
+    --border-color: #DDDDDD;
+}
+
+[data-theme="dark"] {
+/* Dark mode colors */
+--background-color: #121212;
+--primary-text-color: #E0E0E0;
+--secondary-text-color: #BBBBBB;
+--accent-color: #354c35;
+--border-color: #333333;
 }
 
 *, *::after, *::before {
@@ -36,15 +52,15 @@ body {
     font-size: var(--fs-400);
     line-height: 1.5;
     min-height: 100vh;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
 }
 a {
     text-decoration: none;   
     padding: 0 10px; 
+    color: var(--primary-text-color);
 }
 img {
     max-width: 100%;
     display: block;
-}
-h2 {
-    grid-column: feature;
 }
