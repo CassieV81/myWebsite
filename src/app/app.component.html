@@ -1,48 +1,48 @@
 
-<div class="container">
+<div class="wrapper">
   <header id="header">
     <nav>
       <div class="logo"><a href="#">CassV</a></div>
-      <div class="links">
-        <a routerLink="home" routerLinkActive="active" fragment="Home">Home</a>
-        <a routerLink="home" routerLinkActive="active" fragment="About">About</a>
-        <a routerLink="home" routerLinkActive="active" fragment="Skills">Skills</a>
-        <a routerLink="home" routerLinkActive="active" fragment="Contact">Contact</a>
+      <div class="links" appFixNav>
+        <a routerLink="/" routerLinkActive="active" fragment="Home">Home</a>
+        <a routerLink="/" routerLinkActive="active" fragment="About">About</a>
+        <a routerLink="/" routerLinkActive="active" fragment="Projects">Project</a>
+        <a routerLink="/" routerLinkActive="active" fragment="Contact">Contact</a>
       </div>
     </nav>
     <div class="theme-toggle">
-      <!-- <i class="fa fa-sun-o" aria-hidden="true" *ngIf="!isLight"  ></i>
-      <i class="fa fa-moon-o" aria-hidden="true" *ngIf="isLight"></i> -->
       <label class="switch">
-        <input type="checkbox" [checked]="isLight" (click)="toggleTheme()">
+        <input type="checkbox" (click)="toggleTheme()">
         <span class="slider">
           <i class="fa fa-moon-o" aria-hidden="true" *ngIf="isLight"></i>
-          <i class="fa fa-sun-o" aria-hidden="true" *ngIf="!isLight" >
-          </i></span>
+          <i class="fa fa-sun-o" aria-hidden="true" *ngIf="!isLight"></i>
+        </span>
       </label>
     </div>
   </header>
+  <hr>
   <!-- <section>
     <router-outlet></router-outlet>
   </section> -->
   <section id="Home">
     <app-home></app-home>
   </section>
-  <section id="About">
-    <app-about></app-about>
+  <section id="About" >
+    <app-about [linkedinLink]="linkedinLink"></app-about>
   </section>
-  <section id="Skills">
-    <app-skills></app-skills>
+  <section id="Projects">
+    <app-projects></app-projects>
   </section>
   <section id="Contact">
     <app-contact></app-contact>
   </section>
+  <hr>
   <footer>
     <div id="footer">
-      <a href="https://github.com/CassieV81" target="_blank">
+      <a [href]="githubLink" target="_blank">
         <i class="fa fa-github" aria-hidden="true"></i>
       </a>
-      <a href="https://www.linkedin.com/in/cassandra-chidinma-obiagwu-1aa7a81a9/" target="_blank">
+      <a [href]="linkedinLink" target="_blank">
         <i class="fa fa-linkedin" aria-hidden="true"></i>
       </a>
     </div>

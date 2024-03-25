@@ -2,20 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Kode+Mono:wght@400..700&family=Madimi+One&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
 
-  /* :root {
-    --primary-color: #889d64; 
-    --secondary-color: #aeccb6; 
-    --accent-color: #83b19f; 
-    --text-color: #11140c; 
-    --background-color: #f7f5f4;
-  } */
   :root {
+
     --ff-kode: "Kode Mono", monospace; 
     --ff-concert: 'Concert One', sans-serif;
     --ff-madimi: 'Madimi One', sans-serif;
 
-    --fs-xl: clamp(2rem, 5vw, 4rem);
-    --fs-800: clamp(1.5rem, 4vw, 3rem);
+    --fs-xl: clamp(2rem, 5.5vw, 4.5rem);
+    --fs-800: clamp(1.5rem, 4.5vw, 3.2rem);
     --fs-600: clamp(1.3rem, 2.5vw, 3rem);
     --fs-500: clamp(1.25rem, 1.8vw, 2rem);
     --fs-400: clamp(1rem, 1.25vw, 1.25rem);
@@ -23,32 +17,49 @@
     --header-heigth: 10vh;
 
     /* Light mode colors */
-    --background-color: #FFFFFF;
-    --primary-text-color: #333333;
-    --secondary-text-color: #555555;
-    --accent-color: #354c35;
-    --border-color: #DDDDDD;
+    --background-color: #becab8; 
+    --primary-text-color: #2c180e; 
+    --secondary-text-color: #373d35;
+    --accent-color: #cfb6b5; 
+    --border-color: #373d35; 
 }
-
 [data-theme="dark"] {
-/* Dark mode colors */
---background-color: #121212;
---primary-text-color: #E0E0E0;
---secondary-text-color: #BBBBBB;
---accent-color: #354c35;
---border-color: #333333;
+    /* Dark mode colors */
+    --background-color: #373d35; 
+    --primary-text-color: #becab8; 
+    --secondary-text-color: #cfb6b5; 
+    --accent-color: #2c180e; 
+    --border-color: #cfb6b5; 
 }
+  @media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark mode colors */
+        --background-color: #373d35; 
+        --primary-text-color: #becab8; 
+        --secondary-text-color: #cfb6b5; 
+        --accent-color: #2c180e; 
+        --border-color: #cfb6b5; 
+    }
+    [data-theme="light"] {
+        /* Light mode colors */
+        --background-color: #becab8; 
+        --primary-text-color: #2c180e; 
+        --secondary-text-color: #373d35;
+        --accent-color: #cfb6b5; 
+        --border-color: #373d35; 
+    }
+  }
 
 *, *::after, *::before {
     box-sizing: border-box;
 }
-html {
+/* html {
     color-scheme: light dark;
-}
+} */
 body {
     margin: 0px;
     padding: 0px;
-    font-family: var(--ff-kode);
+    font-family: system-ui, 'Helvetica Neue', sans-serif;
     font-size: var(--fs-400);
     line-height: 1.5;
     min-height: 100vh;
@@ -58,9 +69,14 @@ body {
 a {
     text-decoration: none;   
     padding: 0 10px; 
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
 }
 img {
     max-width: 100%;
     display: block;
+}
+h2 {
+    font-size: var(--fs-600);
+    color: var(--secondary-text-color);
+    text-shadow: 1px 1px 3px var(--primary-text-color);
 }

@@ -16,9 +16,11 @@
     font-size: var(--fs-xl);
     font-style: normal;
     font-family: var(--ff-madimi);
+    text-shadow: 2px 2px 2px var(--accent-color), 4px 4px 4px var(--secondary-text-color);
 }
 .intro3 span {
     font-size: var(--fs-800);
     font-style: normal;
     font-family: var(--ff-concert);
+    text-shadow: 2px 2px 2px var(--accent-color), 4px 4px 4px var(--secondary-text-color);
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Input, OnInit, Renderer2, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,9 +9,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AppComponent implements OnInit{
 
-  isLight: boolean = true
+  linkedinLink: string = 'https://www.linkedin.com/in/cassandra-chidinma-obiagwu-1aa7a81a9/';
+  githubLink: string = 'https://github.com/CassieV81';
+
+  preferredTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  currentTheme = this.preferredTheme;
+  isLight: boolean = this.currentTheme === 'light';
+
+  constructor(private renderer: Renderer2) {}
   
   activeRoute: ActivatedRoute = inject(ActivatedRoute);
+  document: Document = inject(DOCUMENT)
 
   ngOnInit() {
     this.activeRoute.fragment.subscribe((value) => {
@@ -23,14 +32,8 @@ export class AppComponent implements OnInit{
     document.getElementById(section)?.scrollIntoView({behavior: 'smooth'})
   }
 
-  applyTheme() {
-    const theme = this.isLight ? 'light' : 'dark';
-    document.body.setAttribute('data-theme', theme);
-  }
-
   toggleTheme() {
+    this.renderer.setAttribute(this.document.body, 'data-theme', this.isLight ? 'dark' : 'light');
     this.isLight = !this.isLight;
-    localStorage.setItem('themePreference', this.isLight ? 'light' : 'dark');
-    this.applyTheme();
   }
 }

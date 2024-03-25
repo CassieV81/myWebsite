@@ -1,0 +1,46 @@
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "title title" "text image";
+    gap: 0 clamp(2px, 10px, 20px);
+
+    h3 {
+        grid-area: title;
+        place-self: center;
+    }
+
+    .text {
+        grid-area: text;
+    }
+
+    .mediaDiv {
+        place-self: center;
+        grid-area: image;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        gap: clamp(3px, 10px, 20px);
+    }
+}
+.btn {
+    display: flex;
+    justify-content: space-around;
+    height: min(30px, 2em);
+}
+button {
+    border: none;
+    outline: transparent;
+    padding: clamp(3px, 5px, 10px) clamp(5px, 12px, 18px) ;
+    font-size: var(--fs-400);
+    border-radius: 5px;
+    color: var(--accent-color);
+    background-color: var(--secondary-text-color);
+
+    &:hover {
+        color: var(--border-color);
+        background-color: var(--background-color);
+        border: solid 1px var(--border-color);
+        transition: 0.3s ease-in-out;
+    }
+}

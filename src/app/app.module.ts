@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { FixNavDirective } from './Directives/fix-nav.directive';
+import { ShowIconDirective } from './Directives/show-icon.directive';
+import { ProjectComponent } from './projects/project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    SkillsComponent,
-    ContactComponent
+    ProjectsComponent,
+    ContactComponent,
+    FixNavDirective,
+    ShowIconDirective,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

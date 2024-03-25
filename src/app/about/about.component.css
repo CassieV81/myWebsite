@@ -1,5 +1,110 @@
 
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(.5rem, 2.5rem, 3rem);
+}
+.imageDiv {
+    display: grid;
+    place-content: center;
+}
 
-/* .container h2 {
-    grid-column: feature;
-} */
+.dynamic-image {
+    --size: min(350px, 30vw);
+
+    position: relative;
+    background: url('../../assets/profile_picture2.png') no-repeat center;
+    background-size: contain;
+    padding-inline: clamp(1rem, 2rem, 3rem);
+    /* border: solid var(--border-color) 1px; */
+    box-shadow: inset -1px -1px 2px var(--secondary-text-color);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: var(--size);
+}
+
+.icons {
+    --offset: calc((var(--size) / 2) * 1.15);
+    --speed: 60s;
+    
+    width:  min(30px, 8vw);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    h5 {
+        margin: 0;
+        display: none;
+    }
+    
+    transform: translate( 
+        calc(cos(var(--degrees)) * var(--offset)), 
+        calc(sin(var(--degrees)) * var(--offset))
+    );
+
+    animation: circle-around var(--speed) linear infinite;
+    transition: transform 0.3s ease;
+
+    img {
+        animation: circle-around var(--speed) linear reverse infinite;
+        transition: transform 0.3s ease;
+    }
+    &:hover {
+        transform: scale(1.1) translate(
+            calc(cos(var(--degrees)) * var(--offset)),
+            calc(sin(var(--degrees)) * var(--offset))
+        );
+
+        h5 {
+            display: block;
+        }
+    }
+}
+.dynamic-image:hover {
+    .icons {
+        animation-play-state: paused;
+    }
+    img {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes circle-around {
+    100% {
+        rotate: 1turn;
+    }
+}
+
+.icons:nth-of-type(1) {
+    --degrees: 0deg;
+}
+.icons:nth-of-type(2) {
+    --degrees: 40deg;
+}
+.icons:nth-of-type(3) {
+    --degrees: 80deg;
+}
+.icons:nth-of-type(4) {
+    --degrees: 120deg;
+}
+.icons:nth-of-type(5) {
+    --degrees: 160deg;
+}
+.icons:nth-of-type(6) {
+    --degrees: 200deg;
+}
+.icons:nth-of-type(7) {
+    --degrees: 240deg;
+}
+.icons:nth-of-type(8) {
+    --degrees: 280deg;
+}
+.icons:nth-of-type(9) {
+    --degrees: 320deg;
+}
+
+
+
+
