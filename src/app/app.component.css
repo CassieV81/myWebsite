@@ -129,11 +129,6 @@ input:checked + .slider:before {
     bottom: 8px;
     font-size: var(--fs-400);
 }
-hr {
-    color: var(--border-color);
-    width: 100%;
-    border: 1px solid;
-}
 .fixNav {
     border-radius: 20px;
     backdrop-filter: blur(5px);

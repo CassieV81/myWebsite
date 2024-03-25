@@ -76,7 +76,15 @@ img {
     display: block;
 }
 h2 {
+    font-family: var(--ff-kode);
     font-size: var(--fs-600);
     color: var(--secondary-text-color);
     text-shadow: 1px 1px 3px var(--primary-text-color);
+    place-self: center;
+    text-align: center;
+}
+hr {
+    color: var(--border-color);
+    width: 100%;
+    border: 1px solid;
 }

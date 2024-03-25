@@ -1,0 +1,4 @@
+
+.wrapper {
+    padding: clamp(2px, 10px, 20px);
+}

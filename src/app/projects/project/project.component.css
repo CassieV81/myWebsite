@@ -5,10 +5,21 @@
     grid-template-rows: auto 1fr;
     grid-template-areas: "title title" "text image";
     gap: 0 clamp(2px, 10px, 20px);
+    padding: clamp(1px, 3px, 5px);
+    border-radius: 10px;
+    /* border: var(--border-color) solid 1px; */
 
     h3 {
         grid-area: title;
-        place-self: center;
+        place-self: start;
+        font-size: var(--fs-500);
+        margin: 0;
+    }
+
+    img {
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px 2px var(--secondary-text-color);
+        background-color: var(--background-color);
     }
 
     .text {
@@ -33,7 +44,7 @@ button {
     outline: transparent;
     padding: clamp(3px, 5px, 10px) clamp(5px, 12px, 18px) ;
     font-size: var(--fs-400);
-    border-radius: 5px;
+    border-radius: 15px;
     color: var(--accent-color);
     background-color: var(--secondary-text-color);
 
@@ -43,4 +54,8 @@ button {
         border: solid 1px var(--border-color);
         transition: 0.3s ease-in-out;
     }
+}
+span {
+    font-weight: bold;
+    color: var(--secondary-text-color);
 }

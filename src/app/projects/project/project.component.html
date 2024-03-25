@@ -2,14 +2,15 @@
 <div class="wrapper">
     <h3>{{project.title}}</h3>
     <div class="text">
-        <p>{{project.text}}</p>
+        <p><span>Description</span> <br> {{project.text}}</p>
+        <p><span>Tech Stack:</span> {{project.techStack}} </p>
     </div>
     <div class="mediaDiv">
         <img [src]="project.imgUrl" [alt]="project.imgAlt">
-        <div class="btn">
-            <button>View</button>
-            <button>Code</button>
+        <div class="btn" *ngIf="project.viewLink || project.codeLink">
+            <a [href]="project.viewLink" target="_blank"><button>View</button></a>
+            <a [href]="project.codeLink" target="_blank"><button>Code</button></a>
         </div>
     </div>
-    
 </div>
+<hr>

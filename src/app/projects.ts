@@ -6,4 +6,5 @@ export class Project {
     imgAlt!: string;
     viewLink!: string;
     codeLink!: string;
+    techStack!: string;
 }
