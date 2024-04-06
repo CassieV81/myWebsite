@@ -1,27 +1,25 @@
-# MyWebsite
+# Project Name
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+This project serves as my learning journey in building a website with Angular. It showcases my progress and skills in web development.
 
-## Development server
+![Project Screenshot](/src/assets/websiteScreenshot.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Table of Contents
+- [About](#about)
+- [Technologies](#technologies)
+- [Contact](#contact)
+- [License](#license)
 
-## Code scaffolding
+## About
+I built this project as a way to learn how to create a website using Angular. Throughout the development process, I aimed to understand Angular's core concepts, such as components, modules, services, and routing. This project allowed me to gain hands-on experience in front-end development and enhance my skills in building interactive and responsive web applications.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies
+The project utilizes the following technologies:
+- Angular: Angular is a TypeScript-based open-source framework for building client-side web applications. It provides a robust structure for developing dynamic single-page applications (SPAs).
+- Formspree: Formspree is a service that allows you to easily handle form submissions on your static website. I integrated Formspree into this project to enable email communication with visitors who fill out the contact form on the website.
 
-## Build
+## Contact
+If you have any questions, suggestions, or feedback about this project, feel free to reach out to me.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+This project is licensed under the [License Name]. You can find the license details in the LICENSE file.
