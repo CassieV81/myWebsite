@@ -2,17 +2,21 @@
 <div class="wrapper">
   <header id="header">
     <nav>
-      <div class="logo"><a href="#">CassV</a></div>
-      <div class="links" appFixNav>
-        <a routerLink="/" routerLinkActive="active" fragment="Home">Home</a>
-        <a routerLink="/" routerLinkActive="active" fragment="About">About</a>
-        <a routerLink="/" routerLinkActive="active" fragment="Projects">Project</a>
-        <a routerLink="/" routerLinkActive="active" fragment="Contact">Contact</a>
+      <div class="logo"><a href="#">Cassandra.Obiagwu</a></div>
+      <div class="hamburger-menu">
+        <input type="checkbox" hidden (click)="toggleNav()" id="toggle">
+        <label for="toggle">&#9776;</label>
+        <div class="links" >
+          <a routerLink="/" routerLinkActive="active" fragment="Home">Home</a>
+          <a routerLink="/" routerLinkActive="active" fragment="About">About</a>
+          <a routerLink="/" routerLinkActive="active" fragment="Projects">Project</a>
+          <a routerLink="/" routerLinkActive="active" fragment="Contact">Contact</a>
+        </div>
       </div>
     </nav>
     <div class="theme-toggle">
       <label class="switch">
-        <input type="checkbox" (click)="toggleTheme()">
+        <input type="checkbox" [checked]="isLight" (click)="toggleTheme()">
         <span class="slider">
           <i class="fa fa-moon-o" aria-hidden="true" *ngIf="isLight"></i>
           <i class="fa fa-sun-o" aria-hidden="true" *ngIf="!isLight"></i>
@@ -36,7 +40,7 @@
     <app-projects></app-projects>
   </section>
   <section id="Contact">
-    <h2>Contact</h2>
+    <h2>Contact Me</h2>
     <app-contact></app-contact>
   </section>
   <hr>

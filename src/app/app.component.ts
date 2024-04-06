@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Input, OnInit, Renderer2, inject } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -15,8 +15,9 @@ export class AppComponent implements OnInit{
   preferredTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   currentTheme = this.preferredTheme;
   isLight: boolean = this.currentTheme === 'light';
+  isToggled: boolean = false;
 
-  constructor(private renderer: Renderer2) {}
+  constructor( private element: ElementRef, private renderer: Renderer2) {}
   
   activeRoute: ActivatedRoute = inject(ActivatedRoute);
   document: Document = inject(DOCUMENT)
@@ -36,4 +37,12 @@ export class AppComponent implements OnInit{
     this.renderer.setAttribute(this.document.body, 'data-theme', this.isLight ? 'dark' : 'light');
     this.isLight = !this.isLight;
   }
+
+  toggleNav() {
+    this.isToggled = !this.isToggled;
+    const menu = this.element.nativeElement.querySelector('.links');
+    menu.style.display = this.isToggled ? 'flex' : 'none';
+    this.renderer.removeClass(menu, 'fixNav');
+  }
+
 }

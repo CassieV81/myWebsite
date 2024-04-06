@@ -2,3 +2,21 @@
 .wrapper {
     padding: clamp(2px, 10px, 20px);
 }
+button {
+    border: none;
+    outline: transparent;
+    padding: clamp(3px, 5px, 10px) clamp(5px, 12px, 18px) ;
+    font-size: var(--fs-400);
+    font-weight: bold;
+    border-radius: 2px;
+    color: var(--background-color);
+    background-color: var(--secondary-text-color);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--secondary-text-color);
+        background-color: var(--background-color);
+        border: solid 1px var(--border-color);
+        transition: 0.3s ease-in-out;
+    }
+}

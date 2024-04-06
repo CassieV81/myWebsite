@@ -12,7 +12,7 @@
     h3 {
         grid-area: title;
         place-self: start;
-        font-size: var(--fs-500);
+        font-size: var(--fs-600);
         margin: 0;
     }
 
@@ -34,6 +34,15 @@
         gap: clamp(3px, 10px, 20px);
     }
 }
+@media screen and (max-width: 500px) {
+    .wrapper {
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+            "title"
+            "text"
+            "image";
+    }
+}
 .btn {
     display: flex;
     justify-content: space-around;
@@ -44,12 +53,14 @@ button {
     outline: transparent;
     padding: clamp(3px, 5px, 10px) clamp(5px, 12px, 18px) ;
     font-size: var(--fs-400);
+    font-weight: bold;
     border-radius: 15px;
-    color: var(--accent-color);
+    color: var(--background-color);
     background-color: var(--secondary-text-color);
+    cursor: pointer;
 
     &:hover {
-        color: var(--border-color);
+        color: var(--secondary-text-color);
         background-color: var(--background-color);
         border: solid 1px var(--border-color);
         transition: 0.3s ease-in-out;

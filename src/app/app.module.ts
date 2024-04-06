@@ -10,6 +10,9 @@ import { ContactComponent } from './contact/contact.component';
 import { FixNavDirective } from './Directives/fix-nav.directive';
 import { ShowIconDirective } from './Directives/show-icon.directive';
 import { ProjectComponent } from './projects/project/project.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { ProjectComponent } from './projects/project/project.component';
     ContactComponent,
     FixNavDirective,
     ShowIconDirective,
-    ProjectComponent
+    ProjectComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,54 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Kode+Mono:wght@400..700&family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Kode+Mono:wght@400..700&family=Madimi+One&display=swap&family=Butterfly+Kids&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
 
-  :root {
+::-webkit-scrollbar {
+    width: clamp(5px, 1em, 1.5em);
+    /* scrollbar-width: thin; */
+}
+::-webkit-scrollbar-track {
+    background-color: var(--secondary-text-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--background-color);
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 100vw;
+}
+/* ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent-text-color);
+} */
+
+
+:root {
 
     --ff-kode: "Kode Mono", monospace; 
     --ff-concert: 'Concert One', sans-serif;
     --ff-madimi: 'Madimi One', sans-serif;
+    --ff-logo: "Butterfly Kids", cursive;
 
-    --fs-xl: clamp(2rem, 5.5vw, 4.5rem);
-    --fs-800: clamp(1.5rem, 4.5vw, 3.2rem);
-    --fs-600: clamp(1.3rem, 2.5vw, 3rem);
+    --fs-xl: clamp(2rem, 4vw, 3.5rem);
+    --fs-800: clamp(1.5rem, 2.5vw, 3rem);
+    --fs-600: clamp(1.3rem, 2vw, 2.5rem);
     --fs-500: clamp(1.25rem, 1.8vw, 2rem);
-    --fs-400: clamp(1rem, 1.25vw, 1.25rem);
+    --fs-400: clamp(1rem, 1.3vw, 1.5rem);
 
     --header-heigth: 10vh;
 
     /* Light mode colors */
-    --background-color: #becab8; 
+    /* --background-color: #becab8; 
     --primary-text-color: #2c180e; 
     --secondary-text-color: #373d35;
     --accent-color: #cfb6b5; 
-    --border-color: #373d35; 
+    --border-color: #373d35;  */
+    --background-color: #f5f5f5;
+    --primary-text-color: #333333;
+    --secondary-text-color: #666666;
+    --accent-color:  #cc9966;
+    --border-color: #cccccc;
 }
 [data-theme="dark"] {
-    /* Dark mode colors */
-    --background-color: #373d35; 
+    /* --background-color: #373d35; 
     --primary-text-color: #becab8; 
     --secondary-text-color: #cfb6b5; 
     --accent-color: #2c180e; 
-    --border-color: #cfb6b5; 
+    --border-color: #cfb6b5;  */
+    --background-color: #333333;
+    --primary-text-color: #f5f5f5;
+    --secondary-text-color: #cccccc;
+    --accent-color:  #cc9966;
+    --border-color: #666666;
 }
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         /* Dark mode colors */
-        --background-color: #373d35; 
-        --primary-text-color: #becab8; 
-        --secondary-text-color: #cfb6b5; 
-        --accent-color: #2c180e; 
-        --border-color: #cfb6b5; 
+        --background-color: #333333;
+        --primary-text-color: #f5f5f5;
+        --secondary-text-color: #cccccc;
+        --accent-color:  #cc9966;
+        --border-color: #666666;
+ 
     }
     [data-theme="light"] {
-        /* Light mode colors */
-        --background-color: #becab8; 
-        --primary-text-color: #2c180e; 
-        --secondary-text-color: #373d35;
-        --accent-color: #cfb6b5; 
-        --border-color: #373d35; 
+        
+        --background-color: #f5f5f5;
+        --primary-text-color: #333333;
+        --secondary-text-color: #666666;
+        --accent-color:  #cc9966;
+        --border-color: #cccccc;
     }
-  }
+}
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -56,15 +84,21 @@
 /* html {
     color-scheme: light dark;
 } */
+/* @media screen and (max-width: 500px) {
+    body {
+        overflow-x: hidden;
+    }
+} */
 body {
     margin: 0px;
     padding: 0px;
     font-family: system-ui, 'Helvetica Neue', sans-serif;
     font-size: var(--fs-400);
     line-height: 1.5;
-    min-height: 100vh;
+    min-height: 100svh;
     color: var(--primary-text-color);
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;   
@@ -77,7 +111,7 @@ img {
 }
 h2 {
     font-family: var(--ff-kode);
-    font-size: var(--fs-600);
+    font-size: var(--fs-800);
     color: var(--secondary-text-color);
     text-shadow: 1px 1px 3px var(--primary-text-color);
     place-self: center;

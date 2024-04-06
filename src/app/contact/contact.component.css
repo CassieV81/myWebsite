@@ -1,1 +1,89 @@
 
+.wrapper {
+    width: min(65ch, 70%);
+    margin-inline: auto;
+    padding: clamp(1rem, 2rem, 3rem);
+    /* border-radius: 10px;
+    box-shadow: inset 0px 0px 2px 1px var(--secondary-text-color); */
+    background-color: var(--background-color);
+}
+@media screen and (max-width: 500px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+.form {
+    display: grid;
+    gap: clamp(2px, 10px, 15px);
+}
+.info-wrapper, .wrapper {
+    display: grid;
+    gap: clamp(2px, 10px, 15px);
+    font-size: var(--fs-500);
+}
+header {
+    font-size: var(--fs-600);
+    place-self: center;
+    color: var(--secondary-text-color);
+}
+.input-box, .text-box {
+    /* border: 1px solid grey;
+    border-radius: 5px; */
+    padding: clamp(1px, 5px, 8px) clamp(2px, 8px, 10px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1px, 5px, 8px);
+}
+label, input, textarea {
+    width: 100%;
+    outline: transparent;
+}
+input, textarea {
+    padding: clamp(2px, 8px, 10px);
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset -1px -1px 3px var(--accent-color);
+    color: black;
+    font-family: var(--ff-kode);
+    font-size: var(--fs-400);
+    max-width: inherit;
+    /* background-color: var(); */
+    resize: none;
+}
+input:focus, textarea:focus {
+    box-shadow: inset 1px 1px 3px var(--accent-color);
+    transition: 300ms ease-in-out;
+}
+button { 
+    border: none;
+    cursor: pointer;
+    outline: transparent;
+    padding: clamp(3px, 5px, 10px) clamp(5px, 12px, 18px) ;
+    font-size: var(--fs-400);
+    font-weight: bold;
+    border-radius: 5px;
+    color: var(--background-color);
+    background-color: var(--primary-text-color);
+}
+button:hover {
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-text-color);
+    transition: 200ms ease-in;
+}
+.submitBtn {
+    justify-self: center;
+}
+button:disabled{
+    cursor: not-allowed;
+}
+small {
+    font-size: small;
+    color: rgb(247, 134, 5);
+}
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+    border: rgb(184, 0, 0) 1px solid;
+}
+input.ng-valid.ng-dirty, textarea.ng-valid.ng-dirty{
+    border: rgb(165, 255, 165) 1px solid;
+}

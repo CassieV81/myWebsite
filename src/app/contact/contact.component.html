@@ -1,3 +1,47 @@
-<!-- <section> -->
-    <h4>Interdum posuere lorem ipsum dolor sit amet. Convallis aenean et tortor at risus viverra adipiscing at. Elementum pulvinar etiam non quam lacus. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Hac habitasse platea dictumst vestibulum rhoncus.</h4>
-<!-- </section> -->
+
+<div class="wrapper">
+    <!-- <header>Contact Me</header> -->
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form">
+        <div class="info-wrapper">
+            <div class="input-box">
+                <label for="firstName">First Name 
+                    <span *ngIf="contactForm.get('firstname')?.touched && contactForm.get('firstname')?.invalid">
+                        <small>*First name required</small></span>
+                </label>
+                <input type="text" id="firstName" placeholder="Jane" formControlName="firstname">
+            </div>
+            <div class="input-box">
+                <label for="lastName"> Last Name </label>
+                <input type="text" id="lastName" placeholder="Doe" formControlName="lastname">
+            </div>
+            <div class="input-box">
+                <label for="email">Email
+                    <span *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+                        <small>*Email required</small>
+                    </span>
+                    <!-- <span *ngIf="contactForm.get('email')?.dirty && contactForm.get('email')?.errors">
+                            <small>*Invalid email</small>
+                    </span> -->
+                </label>
+                <input type="email" id="email" placeholder="abc@example.com" formControlName="email">
+            </div>
+        </div>
+        <div class="text-box">
+            <label for="message">Message
+                <span *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
+                    <small>*Please enter a message</small>
+                </span>
+            </label>
+            <textarea rows="7" cols="20" id="message" placeholder="Type your message here..."
+                formControlName="message"
+            ></textarea>
+        </div>
+        <div class="submitBtn">
+            <button type="submit"
+            [disabled]="contactForm.invalid" >
+            Submit</button>
+        </div>
+    </form>
+    <app-modal *ngIf="isModalVisible" (closeModalEvent)="closeModal()"></app-modal>
+      
+</div>
