@@ -9,14 +9,14 @@
     border-radius: 10px;
     /* border: var(--border-color) solid 1px; */
 
-    h3 {
+    :is(h3) {
         grid-area: title;
         place-self: start;
         font-size: var(--fs-600);
         margin: 0;
     }
 
-    img {
+    :is(img) {
         border-radius: 10px;
         box-shadow: 0px 0px 3px 2px var(--secondary-text-color);
         background-color: var(--background-color);
