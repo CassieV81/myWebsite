@@ -40,7 +40,7 @@
     inset: 0;
     margin: auto;
 
-    :is(h5) {
+    :is(p) {
         margin: 0;
         display: none;
     }
@@ -63,7 +63,7 @@
             calc(sin(var(--degrees)) * var(--offset))
         );
 
-        :is(h5) {
+        :is(p) {
             display: block;
         }
     }
