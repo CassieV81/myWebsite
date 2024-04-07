@@ -8,8 +8,8 @@
     <div class="mediaDiv">
         <img [src]="project.imgUrl" [alt]="project.imgAlt">
         <div class="btn" *ngIf="project.viewLink || project.codeLink">
-            <a [href]="project.viewLink" target="_blank"><button>View</button></a>
-            <a [href]="project.codeLink" target="_blank"><button>Code</button></a>
+            <a [href]="project.viewLink" target="_blank"><button [disabled]="project.viewLink == null ? true : false">View</button></a>
+            <a [href]="project.codeLink" target="_blank"><button [disabled]="project.codeLink == null ? true : false">Code</button></a>
         </div>
     </div>
 </div>
