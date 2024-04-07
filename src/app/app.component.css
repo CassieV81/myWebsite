@@ -57,10 +57,10 @@
         gap: 1em;
         padding: 1em;
         border: solid 2px var(--border-color);
-        /* background-color: var(--secondary-text-color);
+        background-color: var(--secondary-text-color);
         a {
             color: var(--background-color);
-        } */
+        }
     }
     
     /* .hamburger-menu input[type="checkbox"]:checked + .links {
@@ -133,8 +133,8 @@ nav .links {
     font-weight: bold;
 }
 header {
-    --animStart: 500px;
-    --animEnd: 250px;
+    --animStart: 200px;
+    --animEnd: 100px;
 
     display: flex;
     justify-content: space-between;

@@ -21,10 +21,10 @@
     text-shadow: 2px 2px 2px var(--accent-color), 4px 4px 4px var(--secondary-text-color);
 } */
 h1, h6 {
-    --speed: 8s;
+    --speed: 5s;
     --chrlength: 36;
     --blinkspeed: 1s;
-    --delayspeed: 2s;
+    --delayspeed: 1s;
 
     margin-block: 0;
     width: max-content;
@@ -39,9 +39,12 @@ h1 {
     h1 {
         font-size: var(--fs-600);
     }
+    h6 {
+        font-size: var(--fs-400);
+    }
 }
 h6 {
-    font-size: var(--fs-500);
+    font-size: var(--fs-600);
     opacity: 0;
     transform: translateX(20vw);
     animation: comeUp 2s ease-in calc(var(--speed) + var(--delayspeed)) forwards;
@@ -54,30 +57,24 @@ h1::before, h1::after {
 }
 h1::before {
     background-color: var(--background-color);
-    animation: 
-                typing var(--speed) steps(var(--chrlength)) var(--delayspeed) forwards,
-                blink var(--blinkspeed) steps(var(--chrlength)) infinite;
+    animation: typing var(--speed) steps(var(--chrlength)) var(--delayspeed) forwards;
 }
-/* h1::after {
+h1::after {
     width: .125em;
     background-color: var(--primary-text-color);
     animation: 
         typing var(--speed) steps(var(--chrlength)) var(--delayspeed) forwards,
         blink var(--blinkspeed) steps(var(--chrlength)) infinite;
-} */
+}
 
 @keyframes typing {
-    from {
-        border-left: 5px solid var(--primary-text-color);
-    }
     to {
         left: 100%;
-        border-left: 5px solid var(--primary-text-color);
     }
 }
 @keyframes blink {
     100% {
-        border-left: .125em solid transparent;
+        background-color: transparent;
     }
 }
 
