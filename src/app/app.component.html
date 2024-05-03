@@ -4,13 +4,13 @@
     <nav>
       <div class="logo"><a href="#">Cassandra.Obiagwu</a></div>
       <div class="hamburger-menu">
-        <input type="checkbox" hidden (click)="toggleNav()" id="toggle">
-        <label for="toggle">&#9776;</label>
+        <input type="checkbox" hidden  id="toggle">
+        <label for="toggle" (click)="toggleNav()">&#9776;</label>
         <div class="links" >
-          <a routerLink="/" routerLinkActive="active" fragment="Home">Home</a>
-          <a routerLink="/" routerLinkActive="active" fragment="About">About</a>
-          <a routerLink="/" routerLinkActive="active" fragment="Projects">Project</a>
-          <a routerLink="/" routerLinkActive="active" fragment="Contact">Contact</a>
+          <a routerLink="/" fragment="Home">Home</a>
+          <a routerLink="/" fragment="About">About</a>
+          <a routerLink="/" fragment="Projects">Project</a>
+          <a routerLink="/" fragment="Contact">Contact</a>
         </div>
       </div>
     </nav>

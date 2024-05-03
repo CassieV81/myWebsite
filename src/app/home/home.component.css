@@ -21,7 +21,7 @@
     text-shadow: 2px 2px 2px var(--accent-color), 4px 4px 4px var(--secondary-text-color);
 } */
 h1, h6 {
-    --speed: 10s;
+    --speed: 8s;
     --chrlength: 36;
     --blinkspeed: 1s;
     --delayspeed: 1s;
@@ -54,6 +54,7 @@ h1::before, h1::after {
     content: '';
     position: absolute;
     inset: 0;
+    background-color: var(--accent-color);
 }
 h1::before {
     background-color: var(--background-color);
@@ -61,18 +62,25 @@ h1::before {
 }
 h1::after {
     width: .125em;
-    background-color: var(--primary-text-color);
+    background-color: var(--accent-color);
+    margin-left: 1px;
     animation: 
         typing var(--speed) steps(var(--chrlength)) var(--delayspeed) forwards,
         blink var(--blinkspeed) steps(var(--chrlength)) infinite;
 }
 
 @keyframes typing {
+    from {
+        left: 0;
+    }
     to {
         left: 100%;
     }
 }
 @keyframes blink {
+    from {
+        background-color: var(--accent-color);
+    }
     100% {
         background-color: transparent;
     }

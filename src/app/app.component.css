@@ -1,10 +1,10 @@
 
 .wrapper {
-    --gap: clamp(.1rem, 1.5rem, 3rem);
+    --gap: clamp(.1em, 1.5em, 3em);
     --full: minmax(var(--gap), 1fr);
     --main: min(95ch, calc(100% - (var(--gap) * 2)));
-    --popout: minmax(0, 5rem);
-    --feature: minmax(0, 3rem);
+    --popout: minmax(0, 5em);
+    --feature: minmax(0, 3em);
 
     display: grid;
     grid-template-columns: 
@@ -47,25 +47,18 @@
     
     .hamburger-menu .links {
         display: none;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        place-content: center;
         position: fixed;
-        top: 30%;
-        left: 10%;
-        backdrop-filter: blur(10px);
+        inset: 38% auto auto 8%;
         gap: 1em;
         padding: 1em;
-        border: solid 2px var(--border-color);
-        background-color: var(--secondary-text-color);
+        box-shadow: 1px 1px 3px 1px var(--accent-color);
+        border-radius: 0 5px 5px;
+        background-color: var(--background-color);
         a {
-            color: var(--background-color);
+            color: var(--secondary-text-color);
         }
     }
-    
-    /* .hamburger-menu input[type="checkbox"]:checked + .links {
-        display: flex;
-    } */
 
     #header {
         animation: none !important;
@@ -101,6 +94,10 @@
     align-items: center;
     justify-content: center;
     height: var(--header-heigth);
+
+    i {
+        color: var(--accent-color);
+    }
 }
 nav {
     display: flex;
@@ -109,7 +106,8 @@ nav {
     align-items: center;
     font-family: var(--ff-madimi);
     height: var(--header-heigth);
-    flex: 1;
+    /* flex: 1; */
+    width: 70%;
 }
 nav .links {
     font-family: var(--ff-kode);
@@ -123,6 +121,7 @@ nav .links {
     font-size: var(--fs-800);
     font-family: var(--ff-logo);
     font-weight: bold;
+    text-shadow: 1px 1px 2px var(--accent-color);
 }
 header {
     --animStart: 200px;
@@ -206,18 +205,20 @@ input:checked + .slider:before {
 .fa-moon-o{
     position: absolute;
     left: 10px;
-    bottom: 8px;
+    bottom: 7px;
     font-size: var(--fs-400);
     -webkit-transition: .3s;
     transition: .3s;
+    color: var(--accent-color);
 }
 .fa-sun-o {
     position: absolute;
     right: 8px;
-    bottom: 8px;
+    bottom: 7px;
     font-size: var(--fs-400);
     -webkit-transition: .3s;
     transition: .3s;
+    color: var(--accent-color);
 }
 .fixNav {
     border-radius: 20px;

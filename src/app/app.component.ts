@@ -30,7 +30,7 @@ export class AppComponent implements OnInit{
   }
   
   jumpToSection(section: any) {
-    document.getElementById(section)?.scrollIntoView({behavior: 'smooth'})
+    document.getElementById(section)?.scrollIntoView({behavior: 'smooth', block: 'nearest'})
   }
 
   toggleTheme() {
@@ -41,7 +41,8 @@ export class AppComponent implements OnInit{
   toggleNav() {
     this.isToggled = !this.isToggled;
     const menu = this.element.nativeElement.querySelector('.links');
-    menu.style.display = this.isToggled ? 'flex' : 'none';
+    console.log(menu)
+    menu.style.display = this.isToggled ? 'grid' : 'none';
     this.renderer.removeClass(menu, 'fixNav');
   }
 
