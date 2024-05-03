@@ -90,11 +90,8 @@
 }
 .wrapper > #Home {
     grid-column: feature;
-    /* background: url('../assets/profile_picture.png') no-repeat center;
-    background-size: contain; */
     display: flex;
     align-items: center;
-    /* padding-block: max(200px, 20%); */
 }
 .wrapper > #header, #footer {
     grid-column: popout;
@@ -105,9 +102,10 @@
     justify-content: center;
     height: var(--header-heigth);
 }
-header nav {
+nav {
     display: flex;
-    gap: clamp(1em, 10vw, 5em);
+    justify-content: space-between;
+    /* gap: clamp(1em, 10vw, 5em); */
     align-items: center;
     font-family: var(--ff-madimi);
     height: var(--header-heigth);
@@ -123,12 +121,6 @@ nav .links {
 .logo {
     display: var(--logoDisplay, block);
     font-size: var(--fs-800);
-    /* border: 3px dashed; */
-    /* box-shadow: inset 2px 2px 3px var(--accent-color),
-     inset -2px -2px 3px var(--accent-color),
-     inset 4px 4px 5px var(--secondary-text-color), 
-     inset -4px -4px 5px var(--secondary-text-color);
-    text-shadow: 2px 2px 2px var(--accent-color); */
     font-family: var(--ff-logo);
     font-weight: bold;
 }
@@ -141,6 +133,7 @@ header {
     position: sticky;
     z-index: 1000;
     top: -5rem;
+    /* min-width: fit-content; */
        
     animation: stickyNav linear forwards;
     @supports (animation-timeline: view()) {  

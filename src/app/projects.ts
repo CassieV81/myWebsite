@@ -21,7 +21,7 @@ export const projects: Project[] = [
   {
     title: "Portfolio Website",
     text: "This portfolio website is built with Angular, a powerful framework known for its dynamic and responsive user interfaces.  Leveraging Angular's capabilities, I've crafted an interactive experience that showcases my work and skills in a visually engaging and user-friendly manner.",
-    imgUrl: "assets/pexels-abdullah-ghatasheh-1631677.jpg",
+    imgUrl: "assets/project_images/websiteScreenshot.png",
     imgAlt: "",
     viewLink: null,
     codeLink: "https://github.com/CassieV81/myWebsite",

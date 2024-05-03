@@ -29,7 +29,7 @@
     --fs-xl: clamp(2rem, 4vw, 3.5rem);
     --fs-800: clamp(1.5rem, 2.5vw, 3rem);
     --fs-600: clamp(1.3rem, 2vw, 2.5rem);
-    --fs-500: clamp(1.25rem, 1.8vw, 2rem);
+    --fs-500: clamp(1.25rem, 1.6vw, 2rem);
     --fs-400: clamp(1rem, 1.3vw, 1.5rem);
 
     --header-heigth: 10vh;
@@ -80,6 +80,7 @@
 
 *, *::after, *::before {
     box-sizing: border-box;
+    /* border: 1px solid orangered; */
 }
 /* html {
     color-scheme: light dark;
@@ -89,6 +90,7 @@
         overflow-x: hidden;
     }
 } */
+
 body {
     margin: 0px;
     padding: 0px;
@@ -98,7 +100,6 @@ body {
     min-height: 100svh;
     color: var(--primary-text-color);
     background-color: var(--background-color);
-    overflow-x: hidden;
 }
 a {
     text-decoration: none;   

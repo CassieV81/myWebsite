@@ -21,7 +21,7 @@
     text-shadow: 2px 2px 2px var(--accent-color), 4px 4px 4px var(--secondary-text-color);
 } */
 h1, h6 {
-    --speed: 5s;
+    --speed: 10s;
     --chrlength: 36;
     --blinkspeed: 1s;
     --delayspeed: 1s;
