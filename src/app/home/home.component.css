@@ -64,9 +64,15 @@ h1::after {
     width: .125em;
     background-color: var(--accent-color);
     margin-left: 1px;
-    animation: 
+    /* animation: 
         typing var(--speed) steps(var(--chrlength)) var(--delayspeed) forwards,
-        blink var(--blinkspeed) steps(var(--chrlength)) infinite;
+        blink var(--blinkspeed) steps(var(--chrlength)) infinite; */
+    animation-name: typing, blink;
+    animation-duration: var(--speed), var(--blinkspeed);
+    animation-timing-function: steps(var(--chrlength)), steps(var(--chrlength));
+    animation-delay: var(--delayspeed), 0s;
+    animation-fill-mode: forwards, none;
+    animation-iteration-count: 1, infinite;
 }
 
 @keyframes typing {
