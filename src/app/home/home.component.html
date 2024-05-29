@@ -1,14 +1,51 @@
 
-<!-- <section class="diagonal"> -->
-    <!-- <div class="introDiv">
-        <div>
-            <div class="intro1">Hello,</div>
-            <div class="intro2">my name is <br> <span>Cassandra</span></div>
-            <div class="intro3">and I am a <br><span>Software Developer.</span></div>
-        </div>
-    </div> -->
-<!-- </section> -->
 <div class="wrapper">
-    <h1>Hello, my name is Cassandra Obiagwu.</h1>
-    <h6>welcome to my website...</h6>
+    <div class="text">
+        <h1>Hello, my name is Cassandra Obiagwu.</h1>
+        <h6>welcome to my website...</h6>
+    </div>
+    <div class="about">    
+        <div class="show-about" (click)="showAbout()">{{ isHidden ? 'About Me ▼' : 'Hide ▲' }}</div>
+        <div class="about-text" [hidden]="isHidden">
+            <p>I am a software developer who is constantly striving to learn and improve. My journey has mainly revolved around JavaScript and Python. What I love most? The thrill of problem-solving in programming. There's something incredibly satisfying about unraveling a problem and witnessing my solutions come to fruition.</p>
+            <p>This portfolio website highlights some of my work, and also reflects my journey, skills, and dedication to my craft.</p>
+            <p>If you are interested in connecting or learning more about me, please feel free to reach out<a routerLink="/" fragment="Contact">here</a>or connect with me on<a [href]="linkedinLink" target="_blank">LinkedIn.</a></p>
+        </div>
+    </div>
+    <div>
+        <div class="techIcons">
+            <div class="icons" >
+                <img src="assets/tech_icons/JavaScript.png" alt="JavaScript Icon">
+            </div>
+            <div class="icons">
+                <img src="assets/tech_icons/Angular.png" alt="Angular Icon">
+            </div>
+            <div class="icons">
+                <img src="assets/tech_icons/TypeScript.png" alt="TypeScript Icon">
+            </div>
+            <div class="icons">
+                <img src="assets/tech_icons/HTML5.png" alt="HTML5 Icon">
+            </div>
+            <div class="icons">
+                <img src="assets/tech_icons/CSS3.png" alt="CSS3 Icon">
+            </div>
+            <div class="icons">
+                <img src="assets/tech_icons/Python.png" alt="Python Icon">
+            </div>
+            <div class="icons">
+                <img src="assets/tech_icons/SQLite.png" alt="SQLite Icon">
+            </div>
+            <div class="icons">
+                <img src="assets/tech_icons/Git.png" alt="Git Icon">
+            </div>
+        </div>
+        <div class="socials">
+            <a [href]="githubLink" target="_blank">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a [href]="linkedinLink" target="_blank">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
 </div>

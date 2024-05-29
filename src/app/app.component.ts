@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, ElementRef, Input, OnInit, Renderer2, inject } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Output, Renderer2, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,8 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AppComponent implements OnInit{
 
-  linkedinLink: string = 'https://www.linkedin.com/in/cassandra-chidinma-obiagwu-1aa7a81a9/';
-  githubLink: string = 'https://github.com/CassieV81';
+  @Output() linkedinLink: string = 'https://www.linkedin.com/in/cassandra-chidinma-obiagwu-1aa7a81a9/';
+  @Output() githubLink: string = 'https://github.com/CassieV81';
 
   preferredTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   currentTheme = this.preferredTheme;

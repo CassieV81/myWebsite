@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 500px) {
     .wrapper {
-        --gap: 2px;
+        --gap: 5px;
         --full: minmax(var(--gap), 1fr);
     }
 
@@ -80,23 +80,28 @@
 .wrapper > section {
     grid-column: main;
     min-height: calc(100svh - var(--header-heigth));
+    justify-content: center;
+    /* border: 2px solid orange; */
 }
 .wrapper > #Home {
     grid-column: feature;
     display: flex;
-    align-items: center;
+    align-items: center; 
 }
-.wrapper > #header, #footer {
+.wrapper > #header, footer {
     grid-column: popout;
 }
-#footer {
+footer {
     display: flex;
     align-items: center;
     justify-content: center;
     height: var(--header-heigth);
+    color: var(--accent-color);
 
-    i {
-        color: var(--accent-color);
+    span {
+        font-family: var(--ff-logo);
+        margin-inline: 5px;
+        font-weight: bold;
     }
 }
 nav {

@@ -32,7 +32,7 @@
     --fs-500: clamp(1.25rem, 1.6vw, 2rem);
     --fs-400: clamp(1rem, 1.3vw, 1.5rem);
 
-    --header-heigth: 10vh;
+    --header-heigth: clamp(5em, 50px, 10vh);
 
     /* Light mode colors */
     /* --background-color: #becab8; 

@@ -1,31 +1,16 @@
-/* 
-.introDiv {
-    display: flex;
-    justify-content: start;
-}
-.intro1, .intro2, .intro3 {
-    font-family: var(--ff-concert);
-    font-size: var(--fs-600);
-    line-height: 1;
-}
-.intro2 span {
-    font-size: var(--fs-xl);
-    font-style: normal;
-    font-family: var(--ff-madimi);
-    text-shadow: 2px 2px 2px var(--accent-color), 4px 4px 4px var(--secondary-text-color);
-}
-.intro3 span {
-    font-size: var(--fs-800);
-    font-style: normal;
-    font-family: var(--ff-concert);
-    text-shadow: 2px 2px 2px var(--accent-color), 4px 4px 4px var(--secondary-text-color);
-} */
-h1, h6 {
-    --speed: 8s;
+
+.wrapper {
+    --speed: 5s;
     --chrlength: 36;
     --blinkspeed: 1s;
     --delayspeed: 1s;
 
+    display: grid;
+    justify-items: center;
+    gap: 2em;
+}
+
+h1, h6 {
     margin-block: 0;
     width: max-content;
     font-style: normal;
@@ -96,5 +81,102 @@ h1::after {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    25% {
+        height: 25%;
+    }
+    50% {
+        height: 50%;
+    }
+    75% {
+        height: 75%;
+    }
+    100% {
+        opacity: 1;
+        height: auto;
+    }
+}
+/* @keyframes disappear {
+    0% {
+        opacity: 1;
+        height: auto;
+    }
+    25% {
+        height: 75%;
+    }
+    50% {
+        height: 50%;
+    }
+    75% {
+        height: 25%;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+} */
+
+.techIcons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    gap: clamp(5px, 2em, 5vw);
+}
+
+.icons {
+    padding-block: 3em;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        color: var(--accent-color);
+        font-size: clamp(10px, 20px, 5em);
+    }
+}
+.about {
+    --delayspeed: 2s;
+
+    opacity: 0;
+    animation: comeUp 2s ease-in calc(var(--speed) + var(--delayspeed)) forwards;
+    width: 80%;
+    transform: translateX(20vw);
+}
+
+.about-text {
+    padding: 3px clamp(5px, 15px, 1em);
+    box-shadow: inset 0px 0px 3px 4px var(--border-color);
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+
+    a {
+        color: var(--accent-color);
+    }
+}
+.about-text:not([hidden]) {  
+    animation: appear 300ms ease-in forwards;
+}
+/* .about-text[hidden] {
+    animation: disappear 300ms ease-in forwards;
+} */
+.show-about {
+    padding-inline: 5px;
+    cursor: pointer;
+    color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    width: fit-content;
+    
+    span {
+        color: var(--accent-color);
     }
 }
