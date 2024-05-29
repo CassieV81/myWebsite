@@ -2,7 +2,7 @@
 
 This project serves as my learning journey in building a website with Angular. It showcases my progress and skills in web development.
 
-![Project Screenshot](/src/assets/websiteScreenshot.png)
+![Project Screenshot](/src/assets/project_images/website_page.jpeg)
 
 ## Table of Contents
 - [About](#about)
