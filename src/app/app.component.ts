@@ -16,6 +16,7 @@ export class AppComponent implements OnInit{
   currentTheme = this.preferredTheme;
   isLight: boolean = this.currentTheme === 'light';
   isToggled: boolean = false;
+  recentYear: number = new Date().getFullYear();
 
   constructor( private element: ElementRef, private renderer: Renderer2) {}
   
