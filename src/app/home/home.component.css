@@ -126,11 +126,30 @@ h1::after {
 .techIcons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-    gap: clamp(5px, 2em, 5vw);
+    gap: clamp(5px, 1em, 4vw);
 }
 
 .icons {
     padding-block: 3em;
+    transition: scale 300ms;
+    position: relative;
+}
+.icons:hover{
+    scale: 1.2;
+}.icons:hover .tooltip {
+    visibility: visible;
+}
+.tooltip {
+    position: absolute;
+    top: 15%;
+    width: fit-content;
+    font-size: small;
+    border-radius: 2px;
+    background-color: var(--primary-text-color);
+    color: var(--background-color);
+    padding: 0 5px;
+    visibility: hidden;
+    transition: 500ms 1s;
 }
 
 .socials {
