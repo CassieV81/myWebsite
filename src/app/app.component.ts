@@ -12,9 +12,10 @@ export class AppComponent implements OnInit{
   @Output() linkedinLink: string = 'https://www.linkedin.com/in/cassandra-chidinma-obiagwu-1aa7a81a9/';
   @Output() githubLink: string = 'https://github.com/CassieV81';
 
-  preferredTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  currentTheme = this.preferredTheme;
-  isLight: boolean = this.currentTheme === 'light';
+  // preferredTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  // currentTheme = this.preferredTheme;
+  // isDark: boolean = this.currentTheme === 'dark';
+  isDark: boolean = true;
   isToggled: boolean = false;
   recentYear: number = new Date().getFullYear();
 
@@ -35,8 +36,8 @@ export class AppComponent implements OnInit{
   }
 
   toggleTheme() {
-    this.renderer.setAttribute(this.document.body, 'data-theme', this.isLight ? 'dark' : 'light');
-    this.isLight = !this.isLight;
+    this.renderer.setAttribute(this.document.body, 'data-theme', this.isDark ? 'light' : 'dark');
+    this.isDark = !this.isDark;
   }
 
   toggleNav() {
