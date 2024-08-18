@@ -56,7 +56,8 @@
         border-radius: 0 5px 5px;
         background-color: var(--background-color);
         a {
-            color: var(--secondary-text-color);
+            /* color: var(--secondary-text-color); */
+            color: var(--accent-color);
         }
     }
 
@@ -127,6 +128,9 @@ nav .links {
     font-family: var(--ff-logo);
     font-weight: bold;
     text-shadow: 1px 1px 2px var(--accent-color);
+    a {
+        color: var(--secondary-text-color);
+    }
 }
 header {
     --animStart: 200px;
