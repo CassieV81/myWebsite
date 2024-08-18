@@ -43,6 +43,7 @@
         cursor: pointer;
         font-size: var(--fs-xl);
         justify-self: start;
+        color: var(--accent-color);
     }
     
     .hamburger-menu .links {
@@ -195,8 +196,8 @@ header {
     height: 1.5em;
     width: 1.5em;
     left: 0.25em;
-    bottom: 0.2em;
-    background-color: var(--secondary-text-color);
+    bottom: 0.2125em;
+    background-color: var(--accent-color);
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
@@ -208,8 +209,8 @@ input:focus + .slider {
     box-shadow: 0 0 1px var(--background-color);
 }
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(24px);
+    transform: translateX(24px);
 }
 .fa-moon-o{
     position: absolute;
@@ -218,7 +219,7 @@ input:checked + .slider:before {
     font-size: var(--fs-400);
     -webkit-transition: .3s;
     transition: .3s;
-    color: var(--accent-color);
+    color: var(--secondary-text-color);
 }
 .fa-sun-o {
     position: absolute;
@@ -227,7 +228,7 @@ input:checked + .slider:before {
     font-size: var(--fs-400);
     -webkit-transition: .3s;
     transition: .3s;
-    color: var(--accent-color);
+    color: var(--secondary-text-color);
 }
 .fixNav {
     border-radius: 20px;
