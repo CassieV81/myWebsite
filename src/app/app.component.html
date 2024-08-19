@@ -17,10 +17,10 @@
     <div class="theme-toggle">
       <label class="switch">
         <input type="checkbox" [checked]="!isDark" (click)="toggleTheme()">
-        <span class="slider">
+        <div class="toggle">
           <i class="fa fa-moon-o" aria-hidden="true" *ngIf="!isDark"></i>
           <i class="fa fa-sun-o" aria-hidden="true" *ngIf="isDark"></i>
-        </span>
+        </div>
       </label>
     </div>
   </header>
