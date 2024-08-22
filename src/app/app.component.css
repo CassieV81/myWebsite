@@ -69,6 +69,12 @@
         top: 0;
         backdrop-filter: blur(3px);
     }
+    i.fa-moon-o {
+        margin-left: 2px;
+    }
+    i.fa-sun-o {
+        margin-left: 0px;
+    }
     
 }
 .hamburger-menu label {
@@ -176,7 +182,7 @@ header {
     width: 2.125em;
     height: 2.125em;
     border-radius: 50%;
-    border: 2px double var(--border-color);
+    border: 2px double var(--accent-color);
 }
 .switch input { 
     opacity: 0;
@@ -194,12 +200,14 @@ header {
     transition: var(--transition_speed);
 }
 .fa-moon-o{
+    margin-left: 4px;
     font-size: var(--fs-400);
     -webkit-transition: var(--transition_speed);
     transition: var(--transition_speed);
     color: var(--accent-color);
 }
 .fa-sun-o {
+    margin-left: 2px;
     font-size: var(--fs-400);
     -webkit-transition: var(--transition_speed);
     transition: var(--transition_speed);
