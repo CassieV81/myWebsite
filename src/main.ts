@@ -1,7 +1,6 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import './styles.css';
+import { initTheme } from './theme';
+import { renderApp } from './app';
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+initTheme();
+renderApp();

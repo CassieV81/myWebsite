@@ -1,32 +1,46 @@
-# Portfolio Website
+# Cassandra Obiagwu — Portfolio
 
-This project serves as my learning journey in building a website with Angular. It showcases my progress and skills in web development.
+Personal portfolio website showcasing AI projects, research, and experiments.
 
-![Project Screenshot](/src/assets/project_images/website_page.jpeg)
+## Tech Stack
 
-## Table of Contents
-- [About](#about)
-- [Technologies](#technologies)
-- [Contact](#contact)
-- [License](#license)
+- **Vite** — fast build tooling
+- **TypeScript** — type-safe development
+- **Tailwind CSS v4** — utility-first styling
+- **Formspree** — contact form handling
 
-## About
-I built this project as a way to learn how to create a website using Angular. Throughout the development process, I aimed to understand Angular's core concepts, such as components, modules, services, and routing. This project allowed me to gain hands-on experience in front-end development and enhance my skills in building interactive and responsive web applications.
+## Development
 
-## Technologies
-The project utilizes the following technologies:
-- Angular: Angular is a TypeScript-based open-source framework for building client-side web applications. It provides a robust structure for developing dynamic single-page applications (SPAs).
-- Formspree: Formspree is a service that allows you to easily handle form submissions on your static website. I integrated Formspree into this project to enable email communication with visitors who fill out the contact form on the website.
+```bash
+npm install
+npm run dev     # Start dev server at localhost:5173
+npm run build   # Build to docs/ for GitHub Pages
+npm run preview # Preview production build
+```
 
-## Contact
-If you have any questions, suggestions, or feedback about this project, feel free to reach out to me.
-[Visit My Portfolio](https://cassiev81.github.io/myWebsite/)
+## Structure
 
+```
+src/
+├── main.ts              # Entry point
+├── app.ts               # App renderer & initialization
+├── theme.ts             # Dark/light mode management
+├── icons.ts             # SVG icon definitions
+├── styles.css           # Tailwind + custom styles
+├── components/          # UI components
+│   ├── nav.ts
+│   ├── hero.ts
+│   ├── projects.ts
+│   ├── contact.ts
+│   └── footer.ts
+├── data/
+│   └── projects.ts      # Project content data
+└── assets/              # Static assets (images, icons)
+```
 
 ## License
- 
+
 MIT
-The MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
